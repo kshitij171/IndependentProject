@@ -1,0 +1,44 @@
+.header{
+    height: 100vh;
+    background: url(https://iiitd.ac.in/sites/all/themes/gavias_educar/images/administration-bg.jpg);
+    background-size: cover;
+    top: 0;
+    height: 80vh;
+    background-position: 10%;
+    background-repeat: no-repeat;
+}
+
+.navb {
+    height: 20vh;   
+    position: fixed; 
+    top: 0;
+}
+.innerBox {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    background-color: transparent;
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    margin: auto;
+    border-bottom: 1px solid whitesmoke;
+    justify-content: flex-end;
+    align-items: center;
+}
+.boxItem {
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* .innerBox ::before{
+    /* position: absolute;
+    top:99px;
+    right: 90px;    
+    left: 0px;
+    content: "";
+    height: 1px; */
+    /* border-bottom: 
+    border-bottom-color: rgb(186 22 22 / 40%); */
+    /* margin-left: 20px; */
+/* }  */

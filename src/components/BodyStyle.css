@@ -1,0 +1,18 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    grid-auto-rows: minmax(300px,auto);
+    /* background-color: rebeccapurple;  */
+}
+
+.photo{
+    background: url(https://iiitd.ac.in/sites/all/themes/gavias_educar/images/administration-bg.jpg);
+    background-size: cover;
+    padding: 10px;
+    margin: 5px;
+    border: 10px solid transparent;
+}
+.paragraph{
+    border: 10px solid transparent;
+}
