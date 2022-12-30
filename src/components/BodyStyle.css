@@ -12,6 +12,7 @@
     padding: 10px;
     margin: 5px;
     border: 10px solid transparent;
+    background-repeat: no-repeat;
 }
 .paragraph{
     border: 10px solid transparent;
