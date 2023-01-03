@@ -91,8 +91,8 @@ export default function Body() {
     
       <div className='grid'>
       <Carousel
-      // autoPlay={true}
-      // autoPlaySpeed={1000}
+      autoPlay={true}
+      autoPlaySpeed={1000}
       showDots={true} 
       responsive={responsive}
       infinite={true}
