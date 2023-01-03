@@ -31,7 +31,7 @@ export default function Body() {
         "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       name: "Colorful sneakers",
       
-      text: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+      text: " learn how Lorem Ipsum went from..",
     },
     {
       id: 2,
@@ -84,10 +84,21 @@ export default function Body() {
   return (
     <div className='grid-container'>
       <div className='photo'></div>
-      <div className='paragraph'>REN Profile & Facts LØREN (로렌) is ax solo singer, DJ and producer under YG Entertainment‘s sub-label, THEBLACKLABEL. He made his debut on Novemb</div>
+      <div className='paragraph'>REN Profile & Facts LØREN (로렌) is ax
+      dsfffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+      dsfffddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+      ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd solo singer, DJ and producer under YG Entertainment‘s sub-label, THEBLACKLABEL. He made his debut on Novemb</div>
     
       <div className='grid'>
-      <Carousel showDots={true} responsive={responsive}>
+      <Carousel
+      // autoPlay={true}
+      // autoPlaySpeed={1000}
+      showDots={true} 
+      responsive={responsive}
+      infinite={true}
+      
+      >
+
         {product}
       </Carousel>
       </div>
