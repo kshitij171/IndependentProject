@@ -5,7 +5,7 @@ import { Icon24Hours, IconChevronRight } from '@tabler/icons';
 
 const ProfCard = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '250px' }} >
+        <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '250px'}} >
             <Paper mx={'xl'} py={'26px'} shadow="lg" p="lg" withBorder sx={{ maxWidth: '80vw' }} style={{ zIndex: 5 }}>
                 <Flex
                     pl={28}

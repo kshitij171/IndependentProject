@@ -7,15 +7,15 @@ body {
 }
 
 .grid {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   display: grid;
   grid-area: header;
   background-color: white;
   border: none;
-  /* width: 90vw; */
-  margin: 5rem;
+  width: 90vw; 
+ margin: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-column-gap: 2rem;
+  grid-column-gap: 2rem; 
  
 }
 
@@ -126,20 +126,4 @@ p{
 
     /* background-color: rebeccapurple;  */
 }
-
-.photo{
-    background: url(https://iiitd.ac.in/sites/all/themes/gavias_educar/images/administration-bg.jpg);
-    background-size: cover;
-    padding: 10px;
-    grid-area: sidebar;
-    margin: 5px;
-    border: 10px solid transparent;
-    background-repeat: no-repeat;
-}
-.paragraph{
-    border: 10px solid transparent;
-    grid-area: content;
-}
-
-
 

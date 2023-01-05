@@ -1,10 +1,11 @@
 import React from 'react'
-import './BodyStyle.css'
+import './PubCardsStyle.css'
 import Card from './Card'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function Body() {
+
+export default function PubCards() {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -83,12 +84,6 @@ export default function Body() {
   ));
   return (
     <div className='grid-container'>
-      <div className='photo'></div>
-      <div className='paragraph'>REN Profile & Facts LØREN (로렌) is ax
-      dsfffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      dsfffddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd solo singer, DJ and producer under YG Entertainment‘s sub-label, THEBLACKLABEL. He made his debut on Novemb</div>
-    
       <div className='grid'>
       <Carousel
       autoPlay={true}
@@ -96,7 +91,7 @@ export default function Body() {
       showDots={true} 
       responsive={responsive}
       infinite={true}
-      
+   
       >
 
         {product}
