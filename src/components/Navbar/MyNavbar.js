@@ -1,16 +1,17 @@
 import React from 'react';
-import { createStyles, Header, Menu, Group, Center, Burger, Container, Image } from '@mantine/core';
+import { useState } from 'react';
+import { createStyles, Header, Menu, Group, Center, Burger, Container, Image ,Transition,Paper} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { links } from './Constants';
 // fix burger menu
 const useStyles = createStyles((theme) => ({
   header: {
-    position: 'sticky',
+    position: 'fixed',
   },
 
   inner: {
-    height: 56,
+    height: 60,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -41,8 +42,8 @@ const useStyles = createStyles((theme) => ({
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.cyan[1],
     },
+    
   },
-
   linkLabel: {
     marginRight: 5,
   },
@@ -50,7 +51,9 @@ const useStyles = createStyles((theme) => ({
 
 
 export function MyNavbar() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
+  // const [active, setActive] = useState(links[0].link);
+  // const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => {
@@ -60,17 +63,17 @@ export function MyNavbar() {
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+        <Menu key={link.label} trigger="click" exitTransitionDuration={0}>
           <Menu.Target>
             <a
               href={link.link}
               className={classes.link}
               onClick={(event) => event.preventDefault()}
             >
-              <Center>
+              {/* <Center> */}
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size={12} stroke={4} />
-              </Center>
+              {/* </Center> */}
             </a>
           </Menu.Target>
           <Menu.Dropdown >{menuItems}</Menu.Dropdown>
@@ -83,7 +86,10 @@ export function MyNavbar() {
         key={link.label}
         href={link.link}
         className={classes.link}
-        onClick={(event) => event.preventDefault()}
+        onClick={(event) => {
+          event.preventDefault();
+          close();
+        }}
       >
         {link.label}
       </a>
@@ -91,7 +97,7 @@ export function MyNavbar() {
   });
 
   return (
-    <Header height={56} className={classes.header}>
+    <Header height={60} className={classes.header}>
       <Container>
         <div className={classes.inner}>
           <a href='#'>
@@ -102,6 +108,13 @@ export function MyNavbar() {
           </Group>
           <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
         </div>
+        <Transition transition="pop-top-left" duration={200} mounted={opened}>
+          {(styles) => (
+            <Paper className={classes.dropdown} withBorder style={styles}>
+              {items}
+            </Paper>
+          )}
+        </Transition>
       </Container>
     </Header>
   );

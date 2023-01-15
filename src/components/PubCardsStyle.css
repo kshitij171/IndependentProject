@@ -12,8 +12,7 @@ body {
   grid-area: header;
   background-color: white;
   border: none;
-  width: 90vw; 
- margin: 5rem;
+  width: auto; 
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-column-gap: 2rem; 
  
@@ -24,7 +23,9 @@ body {
   margin: 3rem 1rem 3rem 1rem;
 
   box-shadow: 0 3rem 6rem white;
-  width: 20rem;
+  /* width: 20rem; */
+  /* min-width: fit-content; */
+  max-width: 30rem;
   border: none;
   transition: 0.2s;
 }
