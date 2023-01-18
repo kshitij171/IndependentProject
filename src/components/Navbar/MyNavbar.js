@@ -4,6 +4,8 @@ import { createStyles, Header, Menu, Group, Center, Burger, Container, Image ,Tr
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { links } from './Constants';
+import Team from './Pages/Team';
+import { Outlet, Link } from "react-router-dom";
 // fix burger menu
 const useStyles = createStyles((theme) => ({
   header: {
@@ -65,8 +67,8 @@ export function MyNavbar() {
       return (
         <Menu key={link.label} trigger="click" exitTransitionDuration={0}>
           <Menu.Target>
-            <a
-              href={link.link}
+            <Link
+              to={link.link}
               className={classes.link}
               onClick={(event) => event.preventDefault()}
             >
@@ -74,7 +76,7 @@ export function MyNavbar() {
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size={12} stroke={4} />
               {/* </Center> */}
-            </a>
+            </Link>
           </Menu.Target>
           <Menu.Dropdown >{menuItems}</Menu.Dropdown>
         </Menu>
@@ -82,17 +84,17 @@ export function MyNavbar() {
     }
 
     return (
-      <a
+      <Link
         key={link.label}
-        href={link.link}
+        to={link.link}
         className={classes.link}
         onClick={(event) => {
-          event.preventDefault();
+          // event.preventDefault();
           close();
         }}
       >
         {link.label}
-      </a>
+      </Link>
     );
   });
 

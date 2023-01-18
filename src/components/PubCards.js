@@ -4,7 +4,6 @@ import Card from './Card'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-
 export default function PubCards() {
   const responsive = {
     superLargeDesktop: {
@@ -48,7 +47,7 @@ export default function PubCards() {
         "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       name: "iWatch",
       
-      text: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+      text: "enerate Lorem Ipsum placeholder text j use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
     },
     {
       id: 4,
@@ -87,7 +86,7 @@ export default function PubCards() {
       <div className='grid'>
       <Carousel
       autoPlay={true}
-      autoPlaySpeed={1000}
+      autoPlaySpeed={3000}
       showDots={true} 
       responsive={responsive}
       infinite={true}

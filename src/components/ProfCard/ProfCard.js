@@ -6,7 +6,7 @@ import { Icon24Hours, IconChevronRight } from '@tabler/icons';
 const ProfCard = () => {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '250px'}} >
-            <Paper mx={'xl'} py={'26px'} shadow="lg" p="lg" withBorder sx={{ maxWidth: '80vw' }} style={{ zIndex: 5 }}>
+            <Paper mx={'xl'} py={'26px'} shadow="lg" p="lg" withBorder sx={{ minWidth: '80vw' }} style={{ zIndex: 5 }}>
                 <Flex
                     pl={28}
                     mih={50}
@@ -22,7 +22,7 @@ const ProfCard = () => {
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignSelf: 'start' }}>
                         <Blockquote >
                             {ipsum.map((ip) =>
-                                <Text sx={{ width: '32vw', paddingBottom: '12px' }}>{ip}</Text>)}
+                                <Text sx={{ paddingBottom: '12px' }}>{ip}</Text>)}
                             {links.map((li) =>
                                 <NavLink
                                     label={li}

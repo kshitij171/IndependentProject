@@ -8,16 +8,16 @@ import PubCards from '../PubCards'
 const Home = () => {
 	return (
 		<div>
-			<Router>
-				<MyNavbar />
-				<Box sx={{ height: '90vh', position: 'relative' }}>
-	
-				</Box>
-				<Overlay component={Image} src={'https://iiitd.ac.in/sites/all/themes/gavias_educar/images/administration-bg.jpg'} alt={'bg-image'} opacity={0.9} zIndex={-1} />
-
-				<ProfCard />
-				<PubCards/>
-			</Router>
+			<MyNavbar />
+			<Box sx={{position: 'relative' }}>
+			<Image
+				fit="cover"
+				src="https://iiitd.ac.in/sites/all/themes/gavias_educar/images/administration-bg.jpg"
+			/>
+			</Box>
+			
+			<ProfCard />
+			<PubCards/>
 		</div>
 	)
 }

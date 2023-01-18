@@ -13,18 +13,8 @@ export const links =
             "label": "Publication",
         },
         {
-            "link": "#1",
+            "link": "/team",
             "label": "Team",
-            "links": [
-                {
-                    "link": "/team1",
-                    "label": "Team 1"
-                },
-                {
-                    "link": "/team2",
-                    "label": "Team 2"
-                },
-            ]
         },
         {
             "link": "#2",
