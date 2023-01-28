@@ -92,7 +92,7 @@ const Team = (props) => {
     return (
       <>
      
-      <Title order={1} underline color="black.5" align='center' mb={"xl"}>
+      <Title order={1} underline color="black.5" align='center' mb={"xl"} mt={"60px"} pt={"lg"}>
         Our Team
       </Title>
       

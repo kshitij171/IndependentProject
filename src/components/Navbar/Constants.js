@@ -17,21 +17,7 @@ export const links =
             "label": "Team",
         },
         {
-            "link": "#2",
+            "link": "/research",
             "label": "Research",
-            "links": [
-                {
-                    "link": "/research1",
-                    "label": "One"
-                },
-                {
-                    "link": "/research1",
-                    "label": "Two"
-                },
-                {
-                    "link": "/research1",
-                    "label": "Three"
-                }
-            ]
         },
     ];

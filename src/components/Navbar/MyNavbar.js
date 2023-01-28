@@ -1,15 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
-import { createStyles, Header, Menu, Group, Center, Burger, Container, Image ,Transition,Paper} from '@mantine/core';
+import { createStyles, Header, Menu, Group, Burger, Container, Image ,Transition,Paper} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { links } from './Constants';
-import Team from './Pages/Team';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // fix burger menu
 const useStyles = createStyles((theme) => ({
   header: {
     position: 'fixed',
+    backgroundColor: 'rgba(229,229,229, 0.32)'
   },
 
   inner: {
@@ -37,7 +36,7 @@ const useStyles = createStyles((theme) => ({
     padding: '8px 12px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[9],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
