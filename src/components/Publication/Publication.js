@@ -1,5 +1,8 @@
 import { pubdata } from "./Pub_data";
 import { createStyles, SimpleGrid, Card, Image, Text, Container, AspectRatio } from '@mantine/core';
+import { useHover } from "@mantine/hooks";
+
+
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -19,15 +22,18 @@ const useStyles = createStyles((theme) => ({
   
 const Publication=() => {
     const { classes } = useStyles();
+
+    const {hovered, ref} = useHover();
+
   
     const cards = pubdata.map((article) => (
       <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
         <AspectRatio ratio={1920 / 1080}>
           <Image src={article.image} />
+          < Text ref={ref}>
+            {hovered ? 'https://www.nature.com/articles/d41586-023-00258-z': 'link'}
+          </Text>
         </AspectRatio>
-        <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
-          {article.date}
-        </Text>
         <Text className={classes.title} mt={5}>
           {article.title}
         </Text>
