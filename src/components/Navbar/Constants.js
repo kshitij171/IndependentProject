@@ -5,19 +5,23 @@ export const links =
             "label": "Home"
         },
         {
-            "link": "/contact",
-            "label": "Contact"
-        },
-        {
             "link": "/publications",
             "label": "Publication",
+        },
+        {
+            "link": "/research",
+            "label": "Research",
         },
         {
             "link": "/team",
             "label": "Team",
         },
         {
-            "link": "/research",
-            "label": "Research",
+            "link": "/teaching",
+            "label": "Teaching",
+        },
+        {
+            "link": "/contact",
+            "label": "Contact"
         },
     ];
