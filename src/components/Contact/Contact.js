@@ -37,14 +37,19 @@ export function Contact() {
     <form onSubmit={handleSubmit}>
       <Box mt={'80px'} pt={'sm'} ml={'100px'} mr={'100px'}>
       <Title
-                    order={1}
-                    size="h1"
-                    sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}` })}
-                    weight={900}
-                    align="center"
-                >
-                Contact us
-      </Title>
+                      order={1}
+                      size="h1"
+                      sx={{
+                        fontFamily: 'Greycliff CF, sans-serif',
+                        fontWeight: 900,
+                        textAlign: 'center',
+                        color: 'teal'
+                      }}
+                      weight={900}
+                      align="center"
+                  >
+                  Contact Us
+            </Title>
       <TextInput
         type="text"
         label="Name"

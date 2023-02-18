@@ -1,62 +1,128 @@
-import { pubdata } from "./Pub_data";
-import { createStyles, SimpleGrid,Stack, Card, Image, Text, Container,Paper, AspectRatio } from '@mantine/core';
-import { useHover } from "@mantine/hooks";
+import { Card, Image, Text,Paper ,Title} from '@mantine/core';
+import React,{useState} from 'react';
+import {FaLink} from 'react-icons/fa';
 
+const ImageCard = ({ src, alt, reference }) => {
+  const [hovered, setHovered] = useState(false);
 
-
-const useStyles = createStyles((theme) => ({
-    card: {
-      transition: 'transform 150ms ease, box-shadow 150ms ease',
+  return (
+    
+    
+     
   
-      '&:hover': {
-        transform: 'scale(1.01)',
-        boxShadow: theme.shadows.md,
-      },
-    },
-  
-    title: {
-      fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-      fontWeight: 600,
-    },
-  }));
-  
-const Publication=() => {
-    const { classes } = useStyles();
-
-    const {hovered, ref} = useHover();
-
-  
-    const cards = pubdata.map((article) => (
-      
       <Paper
         radius="xl"
         withBorder
         shadow={"md"}
         p="lg"
-      >
-      <Stack spacing={"md"}>
-        <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
-          <AspectRatio ratio={1920 / 1080}>
-            <Image src={article.image} />
-            < Text ref={ref}>
-              {hovered ? 'https://www.nature.com/articles/d41586-023-00258-z': 'link'}
-            </Text>
-          </AspectRatio>
-          <Text className={classes.title} mt={5}>
-            {article.title}
-          </Text>
-        </Card>
-      </Stack>
-      </Paper>
-    ));
-  
-    return (
-      <Container py="xl">
-        <SimpleGrid cols={3} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-          {cards}
-        </SimpleGrid>
-      </Container>
-    );
-  }
+       >
+       
+         <Card
+           onMouseEnter={() => setHovered(true)}
+           onMouseLeave={() => setHovered(false)}
+           style={{ position: 'relative' }}
+         >
+         <Image src={src} alt={alt} height={200} fit="cover" />
+            {hovered && (
+            <a
+              href={reference}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              backgroundColor: 'rgba(255, 255, 255, 0.7)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              cursor: 'pointer',
+            }}
+            >
+            <Text
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              size="lg"
+              weight={500}
+              color="blue"
+            >
+             <FaLink style={{ marginLeft: 4 }} />
+                 Link of Paper
+              </Text>
+            </a>
+            )}
+         
+          </Card>
+        
+       </Paper>
+      
+  );
+};
 
-  export default Publication;
+const Publication = () => {
+  const images = [
+    {
+      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+      alt: 'Placeholder image 1',
+      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+    },
+    {
+      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+      alt: 'Placeholder image 2',
+     
+      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+    },
+    {
+      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+      alt: 'Placeholder image 3',
+      
+      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+    },
+    {
+      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+      alt: 'Placeholder image 4',
+      
+      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+    },
+  ];
+
+  return (
+    <Title
+        order={1}
+        size="h1"
+        sx={{
+           fontFamily: 'Greycliff CF, sans-serif',
+           fontWeight: 900,
+           textAlign: 'center',
+           color: 'teal',
+           marginTop: 80
+
+           
+            }}
+        weight={900}
+        align="center"
+        >
+         Major Publications
+          
+     
+      <div
+       style={{
+       display: 'grid',
+       gridTemplateColumns: 'repeat(3, 1fr)',
+       gap: 16,
+       paddingTop: 20 // add padding to the top
+      }}
+      >
+
+      {images.map((image, index) => (
+        <ImageCard key={index} {...image} />
+      ))}
+     </div>
+    </Title>
+  );
+};
+
+
+export default Publication;
