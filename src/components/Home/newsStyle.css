@@ -1,0 +1,94 @@
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    overflow: hidden;
+    height:400px;
+  }
+
+  .marquee--fit-content:hover .marquee__content {
+    animation-play-state: paused;
+  }
+  .marquee__content {
+    display: flex;
+    flex-direction:column;
+    max-width: 100%;
+    gap: var(--gap);
+  /*   min-height: 100%; */
+  }
+  li{
+    list-style-type: none;
+    /* align-self: ; */
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  i{
+    padding:5px;
+    margin-right: 7px;
+    color: rgb(19, 102, 215)
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  
+  /* Pause animation when reduced-motion is set */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+      animation-play-state: paused !important;
+    }
+  }
+  
+  /* Enable animation */
+  .marquee__content {
+    animation: scroll 10s linear infinite;
+  }
+  
+  /* Reverse animation */
+  .marquee--reverse .marquee__content {
+    animation-direction: reverse;
+  }
+  
+  /* Pause on hover */
+  
+  /* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+  .marquee--fit-content {
+    max-width: max-content;
+  }
+  
+  /* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+  .marquee--pos-absolute .marquee__content:last-child {
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Enable position absolute animation on the duplicate content (last-child) */
+  .marquee--pos-absolute .marquee__content:last-child {
+    animation-name: scroll-abs;
+  }
+  
+  @keyframes scroll-abs {
+    from {
+      transform: translateY(calc(100% + var(--gap)));
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Other page demo styles */
+  .marquee__content > * {
+    padding: 1rem;
+    min-width: 100%;
+    margin-left:-3rem ;
+  }
+  

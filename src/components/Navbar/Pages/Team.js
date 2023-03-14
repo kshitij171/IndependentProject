@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 import {Title, SimpleGrid,Box} from '@mantine/core';
-import { Stack, Modal,  Badge, Button, Group,Avatar, Text,  Paper } from '@mantine/core';
+import { Stack, Modal,  Badge, Button, useMantineTheme,Avatar, Text,  Paper } from '@mantine/core';
 
 
 const Team = (props) => {
+  const theme = useMantineTheme();
     const [opened, setOpened] = useState(false);
     const productData = [
         {
@@ -74,9 +75,13 @@ const Team = (props) => {
                 {item.designation}
             </Badge>
             <Modal
+                centered
+                overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
                 opened={opened}
                 onClose={() => setOpened(false)}
                 title={item.name}
+                overlayOpacity={0.05}
+                overlayBlur={3}
                 
             >
                 {item.moreInfo}
@@ -90,13 +95,13 @@ const Team = (props) => {
       ));
       
     return (
-      <>
+      <div style={{backgroundColor:'#FFFDF0'}}>
      
-      <Title order={1} underline color="black.5" align='center' mb={"xl"}>
+      <Title align='center' mb={"xl"} style={{marginTop:'80px',color: 'black',fontSize: '40px',fontWeight: '800'}}>
         Our Team
       </Title>
       
-      <SimpleGrid
+    <SimpleGrid
       cols={4}
       spacing="lg"
       breakpoints={[
@@ -107,7 +112,7 @@ const Team = (props) => {
     >
         {teamCards}
     </SimpleGrid>
-    </>
+    </div>
     )
 };
   

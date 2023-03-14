@@ -1,19 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
-import { createStyles, Header, Menu, Group, Center, Burger, Container, Image ,Transition,Paper} from '@mantine/core';
+import { createStyles, Header, Menu, Group, Navbar, Burger, Container, Image ,Transition,Paper} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { links } from './Constants';
 import Team from './Pages/Team';
 import { Outlet, Link } from "react-router-dom";
-// fix burger menu
+
 const useStyles = createStyles((theme) => ({
   header: {
     position: 'fixed',
   },
 
   inner: {
-    height: 60,
+    height: 75,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -72,10 +72,10 @@ export function MyNavbar() {
               className={classes.link}
               onClick={(event) => event.preventDefault()}
             >
-              {/* <Center> */}
+              
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size={12} stroke={4} />
-              {/* </Center> */}
+
             </Link>
           </Menu.Target>
           <Menu.Dropdown >{menuItems}</Menu.Dropdown>
@@ -99,7 +99,7 @@ export function MyNavbar() {
   });
 
   return (
-    <Header height={60} className={classes.header}>
+    <Header height={80} className={classes.header}>
       <Container>
         <div className={classes.inner}>
           <a href='#'>

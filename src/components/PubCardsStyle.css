@@ -1,130 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 
-body {
-  /* background-color: #eee; */
-  font-family: "Poppins", sans-serif;
-}
-
-.grid {
-  box-sizing: border-box;
-  display: grid;
-  grid-area: header;
-  background-color: white;
-  border: none;
-  width: auto; 
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-column-gap: 2rem; 
- 
-}
-
-.grid-item {
-  border-radius: 0.4rem;
-  margin: 3rem 1rem 3rem 1rem;
-
-  box-shadow: 0 3rem 6rem white;
-  /* width: 20rem; */
-  /* min-width: fit-content; */
-  max-width: 30rem;
-  border: none;
-  transition: 0.2s;
-}
-
-.grid-item:hover {
+.Jcard:hover {
   transform: translateY(-0.5%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
-.card{
+.Jcard{
   border: none;
+  border-radius: 0.4rem;
+  margin: 3rem 1rem 3rem 1rem;
+  transition: 0.2s;
 }
 .card-img {
   display: block;
-  padding: 0.5rem;
-  border-radius: 50% /10% 25%;
   width: 100%;
   height: 15rem;
   object-fit: cover;
-  /* border: none; */
 }
-
-p{
-  height: 7rem;
-  overflow: hidden;
-}
-.card-content {
-  padding: 1.5rem;
-}
-
-.card-header {
-  font-weight: bold;
-  color: #0d0d0d;
-  margin-bottom: 1rem;
-  background-color: white;
-  text-align: center;
-  height: 50px;
-  overflow: hidden;
-}
-
-.card-text {
-  /* font-size: 1.6rem; */
-  letter-spacing: 0.1rem;
-  line-height: 1.7; 
-  color: #3d3d3d;
-  margin-bottom: 2.5rem;
-}
-
-.card-btn {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  /* font-size: 2rem; */
-  text-align: center;
-  color: #3363ff;
-  background-color: #d8e0fd;
-  border: none;
-  border-radius: 0.4rem;
-  transition: 0.2s;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-}
-
-.card-btn span {
-  margin-left: 1rem;
-  transition: 0.2s;
-}
-
-.card-btn:hover,
-.card-btn:active {
-  background-color: #c2cffc;
-}
-
-.card-btn:hover span,
-.card-btn:active span {
-  margin-left: 1.5rem;
-}
-
-@media only screen and (max-width: 60em) {
-  body {
-    padding: 3rem;
-  }
-
-  .grid {
-    grid-gap: 3rem;
-  }
-}
-
-
-
-.grid-container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 1rem;
-    grid-auto-rows: minmax(300px,auto);
-    grid-template-areas:
-    "sidebar content"
-    "header header"
-    
-
-    /* background-color: rebeccapurple;  */
-}
-
