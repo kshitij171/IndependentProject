@@ -1,7 +1,5 @@
 
 // import './App.css';
-import { MyNavbar } from './components/Navbar/MyNavbar';
-
 import Home from './components/Home/Home';
 import Team from './components/Navbar/Pages/Team';
 import MyNavbar from './components/Navbar/MyNavbar';
