@@ -5,33 +5,23 @@ export const links =
             "label": "Home"
         },
         {
-            "link": "/contact",
-            "label": "Contact"
-        },
-        {
             "link": "/publications",
             "label": "Publication",
+        },
+        {
+            "link": "/research",
+            "label": "Research",
         },
         {
             "link": "/team",
             "label": "Team",
         },
         {
-            "link": "#2",
-            "label": "Research",
-            "links": [
-                {
-                    "link": "/research1",
-                    "label": "One"
-                },
-                {
-                    "link": "/research1",
-                    "label": "Two"
-                },
-                {
-                    "link": "/research1",
-                    "label": "Three"
-                }
-            ]
+            "link": "/teaching",
+            "label": "Teaching",
+        },
+        {
+            "link": "/contact",
+            "label": "Contact"
         },
     ];

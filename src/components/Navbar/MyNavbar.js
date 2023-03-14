@@ -10,6 +10,7 @@ import { Outlet, Link } from "react-router-dom";
 const useStyles = createStyles((theme) => ({
   header: {
     position: 'fixed',
+    backgroundColor: 'rgba(229,229,229, 0.32)'
   },
 
   inner: {
@@ -37,7 +38,7 @@ const useStyles = createStyles((theme) => ({
     padding: '8px 12px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[9],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
