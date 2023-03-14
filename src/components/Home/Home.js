@@ -26,7 +26,6 @@ const Home = () => {
     {
         text:'lllllllllllllllllllllllllllllllllllllasdasssssssssssssssssssssslllllllllll'
     },
-    
   ]
   const images = [
     {
