@@ -8,6 +8,7 @@ import Research from './components/Research/Research';
 import Publication from './components/Publication/Publication';
 import { Contact } from './components/Contact/Contact';
 import { Teaching } from './components/Teaching/Teaching';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/teaching" element={<Teaching/>}/>
           
         </Routes>
+      <Footer/>
       </BrowserRouter>
     
   );
