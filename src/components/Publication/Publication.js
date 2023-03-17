@@ -6,23 +6,12 @@ const ImageCard = ({ src, alt, reference }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    
-    
-     
-  
-      <Paper
-        radius="xl"
-        withBorder
-        shadow={"md"}
-        p="lg"
-       >
-       
-         <Card
+      <Card
            onMouseEnter={() => setHovered(true)}
            onMouseLeave={() => setHovered(false)}
            style={{ position: 'relative' }}
          >
-         <Image src={src} alt={alt} height={200} fit="cover" />
+          <Image src={src} alt={alt} height={200} fit="contain" />
             {hovered && (
             <a
               href={reference}
@@ -54,9 +43,9 @@ const ImageCard = ({ src, alt, reference }) => {
             </a>
             )}
          
-          </Card>
+      </Card>
         
-       </Paper>
+    
       
   );
 };
@@ -77,6 +66,18 @@ const Publication = () => {
     {
       src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
       alt: 'Placeholder image 3',
+      
+      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+    },
+    {
+      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+      alt: 'Placeholder image 4',
+      
+      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+    },
+    {
+      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
+      alt: 'Placeholder image 4',
       
       reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
     },
@@ -119,6 +120,28 @@ const Publication = () => {
       {images.map((image, index) => (
         <ImageCard key={index} {...image} />
       ))}
+     </div>
+
+     <div style={{
+       marginTop:50,
+       display:'flex',
+       justifyContent:'center',
+       alignItems:'center',
+
+     }}
+     >
+      <Text
+          variant="link"
+          component="a"
+          href="/Other_Publication"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Explore more other publications List is here.
+        </Text>
+      
+
      </div>
     </Title>
   );
