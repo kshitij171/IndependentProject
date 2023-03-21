@@ -10,6 +10,7 @@ import { Contact } from './components/Contact/Contact';
 import { Teaching } from './components/Teaching/Teaching';
 import Footer from './components/Footer';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,8 @@ function App() {
           <Route path="/publications" element={<Publication />} />
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/teaching" element={<Teaching/>}/>
+          
+          
           
           
         </Routes>

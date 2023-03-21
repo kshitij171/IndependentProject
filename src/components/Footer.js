@@ -34,6 +34,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px' }}>CopyRight© MicroBiome Informatics Lab, All rights reserved.</p>
     </div>
   )
 }
