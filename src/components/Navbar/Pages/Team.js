@@ -95,7 +95,7 @@ const Team = (props) => {
       ));
       
     return (
-      <div style={{backgroundColor:'#FBFCFA'}}>
+      <div style={{backgroundColor:'#FFFDF0'}}>
      
       <Title align='center' mb={"xl"} style={{marginTop:'80px',color: 'black',fontSize: '40px',fontWeight: '800'}}>
         Our Team

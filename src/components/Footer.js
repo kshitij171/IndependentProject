@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 
 export default function Footer() {
   return (
-    <div style={{ backgroundColor: '#FFFDF0', color: '#000', padding: '2px' }}>
+    <div style={{ backgroundColor: '#FFFDF0', color: '#000', padding: '5px',marginTop: '50px' }}>
       <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ flex: '1' }}>
