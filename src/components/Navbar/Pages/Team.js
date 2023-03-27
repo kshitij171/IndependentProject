@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import {Title, SimpleGrid,Box} from '@mantine/core';
-import { Stack, Modal,  Badge, Button, useMantineTheme,Avatar, Text,  Paper } from '@mantine/core';
+import { Stack, Modal,  Badge, Button, useMantineTheme,Avatar, Text,  Paper,Group } from '@mantine/core';
 
 
 const Team = (props) => {
@@ -15,6 +15,7 @@ const Team = (props) => {
           name: "Colorful sneakers",
           
           moreInfo: " learn how Lorem Ipsum went from..",
+          linkedin:'https://www.narendramodi.in/'
         },
         {
           designation: "M.Tech",
@@ -23,13 +24,14 @@ const Team = (props) => {
           name: "Sport sneakers",
           
           moreInfo: "enerate Lorem Ipsum placeholder moreInfo for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+          linkedin:'https://www.narendramodi.in/'
         },
         {
           designation: "M.Tech",
           imageurl:
             "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           name: "iWatch",
-          
+          linkedin:'https://www.narendramodi.in/',
           moreInfo: "enerate Lorem Ipsum placeholder moreInfo j use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
         },
         {
@@ -37,7 +39,7 @@ const Team = (props) => {
           imageurl:
             "https://images.unsplash.com/photo-1610824352934-c10d87b700cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           name: "Water Bottle",
-         
+          linkedin:'https://www.narendramodi.in/',
           moreInfo: "enerate Lorem Ipsum placeholder moreInfo for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
         },
         {
@@ -45,7 +47,7 @@ const Team = (props) => {
           imageurl:
             "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           name: "Vans sneakers",
-          
+          linkedin:'https://www.narendramodi.in/',
           moreInfo: "enerate Lorem Ipsum placeholder moreInfo for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
         },
         {
@@ -53,7 +55,7 @@ const Team = (props) => {
           imageurl:
             "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           name: "Coco Noir",
-          
+          linkedin:'https://www.narendramodi.in/',
           moreInfo: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
         }
       ];
@@ -71,7 +73,7 @@ const Team = (props) => {
               {item.name}
             </Text>
             
-            <Badge color="pink" variant="light" fullWidth>
+            <Badge color='pink' variant="transparent" size='lg' fullWidth>
                 {item.designation}
             </Badge>
             <Modal
@@ -85,8 +87,13 @@ const Team = (props) => {
                 
             >
                 {item.moreInfo}
+                <div style={{marginTop:'20px'}}>
+                <a href={item.linkedin} target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                </a>
+                </div>
              </Modal>
-            <Button variant="light" color="blue" fullWidth  radius="xl" onClick={() => setOpened(true)}>
+            <Button variant="light" color="blue" fullWidth  radius="xl"  onClick={() => setOpened(true)}>
                 View More
             </Button>
          </Stack>
@@ -95,9 +102,9 @@ const Team = (props) => {
       ));
       
     return (
-      <div style={{backgroundColor:'#FFFDF0'}}>
+      <div style={{backgroundColor:'white'}}>
      
-      <Title align='center' mb={"xl"} style={{marginTop:'80px',color: 'black',fontSize: '40px',fontWeight: '800'}}>
+      <Title align='center' mb={"xl"} style={{marginTop:'80px',color: 'teal',fontSize: '40px',fontWeight: '800'}}>
         Our Team
       </Title>
       

@@ -16,17 +16,29 @@ const Home = () => {
   
   const news = [
     {
-      text:'PM Modis speech in Rajya Sabha: Key points'
+      text:'a'
     },
     {
-      text:'Supreme Court sends to Bombay HC CBI plea against nod granted to Nirav Modi'
+      text:'b'
     },
     {
-      text:'What Chinese balloons are telling India about espionageWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionag'
+      text:' Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionag'
     },
     {
-        text:'lllllllllllllllllllllllllllllllllllllasdasssssssssssssssssssssslllllllllll'
+        text:'d'
     },
+    {
+        text:'e'
+    },
+    {
+      text:'f'
+  },
+  {
+    text:'j'
+},
+{
+  text:'k'
+},
   ]
   const images = [
     {
