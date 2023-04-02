@@ -85,7 +85,7 @@ const Home = () => {
 
 		  </Carousel.Item>
       ))}
-    </Carousel>	
+  </Carousel>	
 	
 	
 	
@@ -113,15 +113,9 @@ const Home = () => {
             <h1 style={{marginTop:'20px'}}>FUNDED BY</h1>
         </div>
         <div style={{display:'flex',justifyContent:'center'}}>
-        <Group position="center" spacing="xl">
-          <AspectRatio ratio={1/1} w={'250px'} mt="lg">
+          <AspectRatio ratio={1/1} w={'400px'} mt="lg">
             <Image src={'http://www.goda.chem.s.u-tokyo.ac.jp/assets/img/about.jpg'} alt={'lab'} />
           </AspectRatio>
-          <AspectRatio ratio={1/1} w={'250px'} mt="lg">
-            <Image src={'http://www.goda.chem.s.u-tokyo.ac.jp/assets/img/about.jpg'} alt={'lab'} />
-          </AspectRatio>
-        </Group>
-          
         </div>
 			</div>
 

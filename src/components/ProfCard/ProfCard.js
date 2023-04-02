@@ -44,8 +44,8 @@ const ProfCard = () => {
                     <a href="https://www.narendramodi.in/" target="_blank">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="https://www.narendramodi.in/" target="_blank">
-                    <i class="fa-brands fa-square-github fa-2xl"></i>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tarini.ghosh@iiitd.ac.in" target="_blank">
+                    <i class="fa-solid fa-envelope fa-2xl"></i>
                     </a>
 
                 </Group>

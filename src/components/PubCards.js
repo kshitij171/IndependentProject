@@ -76,7 +76,9 @@ export default function PubCards() {
   ];
   const product = productData.map((item) => (
     <div className="Jcard">
+      <a href="https://www.narendramodi.in/" target="_blank">
           <img className="card-img" src={item.imageurl} alt="Rome" />
+      </a>
     </div>
   ));
   return (

@@ -4,6 +4,7 @@ import { createStyles, Header, Menu, Group, Navbar, Burger, Container, Image ,Tr
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { links } from './Constants';
+import logo from '../../assets/logo.png';
 import Team from './Pages/Team';
 import { Outlet, Link } from "react-router-dom";
 
@@ -103,9 +104,9 @@ export function MyNavbar() {
     <Header height={80} className={classes.header}>
       <Container>
         <div className={classes.inner}>
-          <a href='#'>
-            <Image width={'25px'} src={"https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"} />
-          </a>
+          
+          <Image width={'125px'} src={logo} />
+          
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>

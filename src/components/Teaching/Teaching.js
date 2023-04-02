@@ -7,19 +7,21 @@ export function Teaching(){
             <Title
                       order={1}
                       size="h1"
+                      mb={"lg"}
                       sx={{
-                        fontFamily: 'Greycliff CF, sans-serif',
-                        fontWeight: 900,
+                      
+                        fontWeight: 800,
+                        fontSize:'40px',
                         textAlign: 'center',
                         color: 'teal'
                       }}
-                      weight={900}
+                      weight={800}
                       align="center"
                   >
                   Courses
             </Title>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-               <Card shadow="sm" style={{maxWidth: 300}}>
+               <Card withBorder shadow="sm" p="lg" radius="xl" style={{maxWidth: 300}}>
                   <Image
                     src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG"
                     alt ="BIO548"

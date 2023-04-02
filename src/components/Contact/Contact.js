@@ -40,12 +40,12 @@ export function Contact() {
                       order={1}
                       size="h1"
                       sx={{
-                        fontFamily: 'Greycliff CF, sans-serif',
-                        fontWeight: 900,
+                        fontWeight: 800,
+                        fontSize:'40px',
                         textAlign: 'center',
                         color: 'teal'
                       }}
-                      weight={900}
+                      weight={800}
                       align="center"
                   >
                   Contact Us
