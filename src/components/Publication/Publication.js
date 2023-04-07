@@ -1,6 +1,9 @@
-import { Card, Image, Text,Paper ,Title} from '@mantine/core';
+import { Card, Image, Text,Button ,Title} from '@mantine/core';
 import React,{useState} from 'react';
 import {FaLink} from 'react-icons/fa';
+import './OtherPublication.js';
+
+
 
 const ImageCard = ({ src, alt, reference, title }) => {
   const [hovered, setHovered] = useState(false);
@@ -60,50 +63,9 @@ const ImageCard = ({ src, alt, reference, title }) => {
   );
 };
 
-const PublicationList = () => {
-  // List of publications year-wise
-  const publications = [    {      year: '2022',      papers: [        'Paper 1',        'Paper 2',        'Paper 3',      ],
-    },
-    {
-      year: '2021',
-      papers: [
-        'Paper 4',
-        'Paper 5',
-        'Paper 6',
-      ],
-    },
-    {
-      year: '2020',
-      papers: [
-        'Paper 7',
-        'Paper 8',
-        'Paper 9',
-      ],
-    },
-  ];
-
-  return (
-    <div>
-      {publications.map(({ year, papers }) => (
-        <div key={year}>
-          <h2 style={{ color: 'black', fontWeight: 'normal' }}>{year}</h2>
-          <ul style={{ textAlign: 'left' }}>
-            {papers.map((paper) => (
-              <li key={paper} style={{ color: 'black', fontWeight: 'normal' }}>{paper}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-
-
-
 const Publication = () => {
-  const [showPublicationList, setShowPublicationList] = useState(false);
-
+ 
+  
   const images = [
     {
       src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
@@ -142,9 +104,11 @@ const Publication = () => {
       reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
     },
   ];
-
-
+  
+  
   return (
+    
+    <>
     <Title
       order={1}
       size="h1"
@@ -172,35 +136,22 @@ const Publication = () => {
           <ImageCard key={index} {...image} />
         ))}
       </div>
-
-      <div
-        style={{
-          marginTop: 50,
-          display: 'flex',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          cursor: 'pointer',
-        }}
-        onClick={() => setShowPublicationList(!showPublicationList)}
-      >
-        <span style={{ marginRight: '8px' }}>
-          Explore more other publications here
-        </span>
-        {showPublicationList ? (
-          <span style={{ fontSize: '1.2em' }}>▲</span>
-        ) : (
-          <span style={{ fontSize: '1.2em' }}>▼</span>
-        )}
-
-
-      </div>
-
-      {showPublicationList && <PublicationList />}
-
-      
-
-     
     </Title>
+    <Button
+      style={{
+        display: 'block',
+        margin: '40px auto 0',
+        color: '#ffffff',
+        backgroundColor: 'teal',
+      }}
+      onClick={() => {
+      window.location.href = '/publications/OtherPublication';
+      }}
+    >
+    Explore More Other publications
+    </Button>
+  </>
+
   );
 };
 
