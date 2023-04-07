@@ -145,7 +145,7 @@ const Publication = () => {
         backgroundColor: 'teal',
       }}
       onClick={() => {
-      window.location.href = '/publications/OtherPublication';
+        window.open('/publications/OtherPublication', '_blank')
       }}
     >
     Explore More Other publications

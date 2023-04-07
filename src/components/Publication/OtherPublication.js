@@ -40,33 +40,25 @@ const publications = [
 ];
 
 function PublicationList() {
-  const years = Array.from(new Set(publications.map((p) => p.year))).sort().reverse();
-
+  // const years = Array.from(new Set(publications.map((p) => p.year))).sort().reverse();
+  publications.sort((a, b) => b.year - a.year);
   return (
-    <div style={{paddingTop: '100px', paddingBottom: '50px'}}>
-      <table>
+    <div style={{paddingTop:'100px', display:'flex',justifyContent:'center',textAlign:'center'}}>
+      <table style={{borderCollapse:'separate',borderSpacing:'30px'}}>
         <thead>
-          <tr>
-            <th style={{backgroundColor: 'teal', color: 'white'}}>Year</th>
-            <th style={{backgroundColor: 'teal', color: 'white'}}>Title</th>
+          <tr style={{backgroundColor: 'teal', color: 'white'}}>
+            <th colspan="2" >Year</th>
+            <th colspan="2" >Title</th>
           </tr>
         </thead>
         <tbody>
-          {years.map((year) => (
-            <React.Fragment key={year}>
+          {publications.map((pb) => (
               <tr>
-                <td>{year}</td>
+                <td>{pb.year}</td>
                 <td></td>
+                <td></td>
+                <td><a href={pb.link} target="_blank" rel="noopener noreferrer">{pb.title}</a></td>
               </tr>
-              {publications
-                .filter((p) => p.year === year)
-                .map((p) => (
-                  <tr key={p.title}>
-                    <td></td>
-                    <td><a href={p.link} target="_blank" rel="noopener noreferrer">{p.title}</a></td>
-                  </tr>
-              ))}
-            </React.Fragment>
           ))}
         </tbody>
       </table>
