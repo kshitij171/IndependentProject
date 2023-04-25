@@ -5,7 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import { links } from './Constants';
 import logo from '../../assets/logo.png';
-import Team from './Pages/Team';
+import Team from './Team';
 import { Outlet, Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
