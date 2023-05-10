@@ -18,7 +18,7 @@ export function Contact() {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      emailjs.sendForm('service_vp3s1gk', 'template_4162x84', e.target, 'rWfAwNYPsYMhYqP5V')
+      emailjs.sendForm('service_2jy2oia', 'template_z8szd5l', e.target, 'r8yNpj0y3aDYaWWB_')
       .then((result) => {
           console.log(result.text);
           setName('');
