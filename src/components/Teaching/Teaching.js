@@ -1,48 +1,65 @@
-import { Card,Image,Text ,Box,Title} from "@mantine/core";
+import React from 'react';
+import { Title, SimpleGrid, Image, Paper, Stack, Text } from '@mantine/core';
 
-export function Teaching(){
+export function Teaching(props) {
+  const productData = [
+    {
+      imageurl: require('../../assets/course_image.png'),
+      name: 'BIO548(HMDS)',
+      description: 'Human Microbiome Data Science',
+    },
+    {
+      imageurl: require('../../assets/course_image.png'),
+      name: 'BIO549(CoMeG)',
+      description: 'Computational Metagenomics',
+    },
+  ];
 
-    return(
-        <Box mt={'80px'} pt={'sm'} ml={'100px'} mr={'100px'}>
-            <Title
-                      order={1}
-                      size="h1"
-                      mb={"lg"}
-                      sx={{
-                      
-                        fontWeight: 800,
-                        fontSize:'40px',
-                        textAlign: 'center',
-                        color: 'teal'
-                      }}
-                      weight={800}
-                      align="center"
-                  >
-                  Courses
-            </Title>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-               <Card withBorder shadow="sm" p="lg" radius="xl" style={{maxWidth: 300}}>
-                  <Image
-                    src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG"
-                    alt ="BIO548"
-                    fit="contain"
-                    height={200}
-                    style={{marginBottom : 16}}
+  const teamCards = productData.map((item) => (
+    <Paper
+      radius={20}
+      withBorder
+      shadow={'xs'}
+      p="xs"
+      key={item.name}
+      style={{ width: '300px', margin: 'auto' }}
+    >
+      <Image
+        src={item.imageurl}
+        width="100%"
+        height={200}
+        objectFit="cover"
+        style={{ marginBottom: '1rem' }}
+      />
+      <Stack spacing={'xs'}>
+        <Text align="center" size="xl" weight={500}>
+          {item.name}
+        </Text>
+        <Text align="center" size="xl" weight={500}>
+          {item.description}
+        </Text>
+      </Stack>
+    </Paper>
+  ));
 
-                  />
-                  <Text size="lg" weight={700} style={{ textAlign: 'center' }}>
-                     BIO548
-                  </Text>
-                  <Text size="lg" weight={700} style={{ textAlign: 'center' }}>
-                    Human Microbiome Data Science
-                  </Text>
-                </Card>  
-            </div>
-            
-        </Box>
-    
-    
-    
-    
-    );
+  return (
+    <div style={{ backgroundColor: 'white', textAlign: 'center' }}>
+      <Title
+        align="center"
+        mb={'xs'}
+        style={{
+          marginTop: '80px',
+          color: 'teal',
+          fontSize: '40px',
+          fontWeight: '800',
+        }}
+      >
+        Courses
+      </Title>
+
+      <SimpleGrid cols={2} spacing="xs" style={{ margin: 'auto' }}>
+        {teamCards}
+      </SimpleGrid>
+    </div>
+  );
 }
