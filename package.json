@@ -26,6 +26,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-bootstrap-carousel": "^4.1.1",
+    "react-doc-viewer": "^0.1.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-leaflet": "^4.2.1",

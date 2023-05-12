@@ -58,6 +58,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+
 const Publication = () => {
   const { classes } = useStyles();
   const matches = useMediaQuery('(max-width: 767px)');
@@ -89,7 +90,7 @@ const Publication = () => {
               bottom: 0,
               left: 0,
               right: 0,
-              backgroundColor: 'rgba(205, 205, 205, 0.7)',
+              backgroundColor: 'rgba(180, 180, 180, 0.7)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
