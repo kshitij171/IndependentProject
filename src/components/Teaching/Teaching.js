@@ -16,12 +16,13 @@ const TeachingData = [
 
 const useStyles = createStyles((theme) => ({
   card: {
+    
+    boxShadow: theme.shadows.md,
     transition: 'transform 150ms ease, box-shadow 150ms ease',
     margin: theme.spacing.xl,
 
     '&:hover': {
-      transform: 'scale(1.01)',
-      boxShadow: theme.shadows.md,
+      transform: 'scale(1.01)'
     },
   },
 

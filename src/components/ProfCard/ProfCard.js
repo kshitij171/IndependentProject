@@ -1,6 +1,6 @@
 import { Text, createStyles, Image, Flex, Paper, Group, AspectRatio, Blockquote,Stack } from '@mantine/core';
 import { ipsum} from './Constant';
-import img from '../../assets/prof_img.jpg';
+import img from '../../assets/tarini.png';
 import { Icon24Hours, IconChevronRight } from '@tabler/icons';
 const useStyles = createStyles((theme) => ({
     container: {
@@ -30,18 +30,18 @@ const ProfCard = () => {
             justify={{base:'center', sm: 'center' }}
             className={classes.container}
             >
-            <AspectRatio  ratio={1/1} w={'850px'} mt="lg">
-                        <Image src={img} alt={'Prof. image'} />
+            <AspectRatio  ratio={1 / 1} w={3000} mx="auto">
+                <Image src={img} alt={'Prof. image'} />
             </AspectRatio>
             <Stack >
             <Text size={30} fw = {700} c="rgb(19, 102, 215)" >Tarini Shankar Ghosh</Text>
-            <Text size={20} fw = {500}>Scientist, Engineer & Educator</Text>
+            <Text size={20} fw = {500}>Computational Microbiologist & Educator</Text>
             <Blockquote className='bb'>
                 {ipsum.map((ip) =>
                     <Text fs="italic" sx={{ paddingBottom: '12px' }}>{ip}</Text>)
                 }
                 <Group position="center" spacing="lg">
-                    <a href="https://www.narendramodi.in/" target="_blank">
+                    <a href="https://www.linkedin.com/in/dr-tarini-shankar-ghosh-3b211868" target="_blank">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tarini.ghosh@iiitd.ac.in" target="_blank">

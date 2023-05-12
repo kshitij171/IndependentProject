@@ -28,56 +28,44 @@ export default function PubCards() {
     {
       id: 1,
       imageurl:
-        "https://www.iiitd.ac.in/sites/default/files/images/logo/logo.jpg",
-      name: "Colorful sneakers",
-      
-      text: " learn how Lorem Ipsum went from..",
+        require('../assets/NatureReviewsGastro.jfif'),
+      link:'https://www.nature.com/articles/s41575-022-00605-x'
     },
     {
       id: 2,
       imageurl:
-        "https://www.iiitd.ac.in/sites/default/files/images/logo/logo.jpg",
-      name: "Sport sneakers",
-      
-      text: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+        require('../assets/NatureAgingCover.png'),
+      link:'https://www.nature.com/articles/s43587-022-00306-9'
     },
     {
       id: 3,
       imageurl:
-        "https://www.iiitd.ac.in/sites/default/files/images/logo/logo.jpg",
-      name: "iWatch",
-      
-      text: "enerate Lorem Ipsum placeholder text j use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+        require('../assets/NatureEcologyCover.png'),
+      link:'https://www.nature.com/articles/s41559-020-1236-0'
     },
     {
       id: 4,
       imageurl:
-        "https://www.iiitd.ac.in/sites/default/files/images/logo/logo.jpg",
-      name: "Water Bottle",
-     
-      text: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+        require('../assets/NatureMedicineCover.png'),
+      link:'https://www.nature.com/articles/s41591-020-0963-8'
     },
     {
       id: 5,
       imageurl:
-        "https://www.iiitd.ac.in/sites/default/files/images/logo/logo.jpg",
-      name: "Vans sneakers",
-      
-      text: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+        require('../assets/GastroenterologyCover.jpg'),
+      link:'https://www.gastrojournal.org/article/S0016-5085(20)35508-6/fulltext',
     },
     {
       id: 6,
       imageurl:
-        "https://www.iiitd.ac.in/sites/default/files/images/logo/logo.jpg",
-      name: "Coco Noir",
-      
-      text: "enerate Lorem Ipsum placeholder text for use in your graphic, print and web layouts, and discover plugins for your favorite writing, design and blogging tools. Explore the origins, history and meaning of the famous passage, and learn how Lorem Ipsum went from..",
+        require('../assets/GutCover.jfif'),
+      link:'https://gut.bmj.com/content/69/7/1218'
     }
   ];
   const product = productData.map((item) => (
     <div className="Jcard">
-      <a href="https://www.narendramodi.in/" target="_blank">
-          <img className="card-img" src={item.imageurl} alt="Rome" />
+      <a href={item.link} target="_blank">
+          <img className="card-img" src={item.imageurl} style={{width:'100%',height:'100%',objectFit:'cover'}} alt="Rome" />
       </a>
     </div>
   ));

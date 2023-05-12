@@ -5,7 +5,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 // import Carousel from 'react-bootstrap/Carousel';
 import "react-multi-carousel/lib/styles.css";
-
+import videoFile from '../../assets/video.gif';
+import Group_photo from '../../assets/Group_photo.jpg';
+import funded from '../../assets/funded.jpeg';
 import ProfCard from '../ProfCard/ProfCard';
 import { Image, Highlight,Paper,AspectRatio,Title,Group } from '@mantine/core';
 import PubCards from '../PubCards';
@@ -16,42 +18,24 @@ const Home = () => {
   
   const news = [
     {
-      text:'a'
+      text:`Extremely delighted to share that our latest article entitled "Translating the Microbiome - What's the target?" has been published in Gastroenterology journal.`,
+      link: 'https://pubmed.ncbi.nlm.nih.gov/37094661/'
     },
-    {
-      text:'b'
-    },
-    {
-      text:' Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionagWhat Chinese balloons are telling India about espionag'
-    },
-    {
-        text:'d'
-    },
-    {
-        text:'e'
-    },
-    {
-      text:'f'
-  },
-  {
-    text:'j'
-},
-{
-  text:'k'
-},
+    
+    
   ]
   const images = [
     {
       id: 1,
-      src: 'https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/Vd3bj2jPe/videoblocks-female-scientist-with-microscope-in-lab-woman-scientist-doing-microscope-research-microscope-scientist-working-in-lab-lab-scientist-looking-in-microscope-science-laboratory-research_rvlu85o5e_thumbnail-1080_01.png',
-      text:'Decoding The Big Stories Of Our Little Bugs',
+      src: videoFile,
+      text:'',
       highlighted_text:'Big Stories',
 
       alt: "First Slide"
     },
     {
       id: 2,
-      src: 'http://www.goda.chem.s.u-tokyo.ac.jp/assets/img/slides/slide-1.jpg',
+      src: Group_photo,
       text:'Decoding The Big Stories Of Our Little Bugs',
       highlighted_text:'Big Stories',
 
@@ -66,7 +50,7 @@ const Home = () => {
 	<Carousel controls="true" >
       {images.map(imageSlide => (
           <Carousel.Item key={imageSlide.id} style={{marginTop:'80px' ,height:'calc(100vh - 150px)'}}>
-            <div style={{backgroundImage:`url(${imageSlide.src})`,backgroundSize:'cover',height:'100%',textAlign:'left',display:'flex',alignItems:'center'}}>
+            <div style={{backgroundImage:`url(${imageSlide.src})`,width:'100%',height:'100%',backgroundSize:'cover',backgroundPosition:'center',textAlign:'left',display:'flex',alignItems:'center'}}>
       <Highlight
           align="left"
           
@@ -98,7 +82,7 @@ const Home = () => {
 			<div style={{backgroundColor:'white',padding:'30px',display:'flex' ,justifyContent:'center'}}>
 				
 				<AspectRatio ratio={1/1} w={'600px'} mt="lg">
-					<Image src={'http://www.goda.chem.s.u-tokyo.ac.jp/assets/img/about.jpg'} alt={'lab'} />
+					<Image src={require('../../assets/microbiome.png')} alt={'lab'} />
 				</AspectRatio>
 			</div>
 			<div style={{backgroundColor:'#FFFDF0',padding:'30px'}}>
@@ -114,7 +98,7 @@ const Home = () => {
         </div>
         <div style={{display:'flex',justifyContent:'center'}}>
           <AspectRatio ratio={1/1} w={'400px'} mt="lg">
-            <Image src={'http://www.goda.chem.s.u-tokyo.ac.jp/assets/img/about.jpg'} alt={'lab'} />
+            <Image src={funded} alt={'lab'} />
           </AspectRatio>
         </div>
 			</div>
@@ -128,14 +112,16 @@ const Home = () => {
             <ul className="marquee__content">
               {
                 news.map(news=>(
-                  <li>
-                    <a href="https://www.narendramodi.in/" target="_blank">
+                  <li class="news-item">
+                    <a href={news.link} target="_blank">
                     
                     <Title underline order={3} weight={500} align="left">
                     <i class="fa-solid fa-newspaper"></i>
                       {news.text}
                     </Title>
+                                        
                     </a>
+                    <span className="new-tag">New</span>  
                   </li>
                    
                 ))
@@ -144,14 +130,16 @@ const Home = () => {
             <ul aria-hidden="true" className="marquee__content">
             {
                 news.map(news=>(
-                  <li>
-                    <a href="https://www.narendramodi.in/" target="_blank">
+                  <li class="news-item">
+                    <a href={news.link} target="_blank">
                     
                     <Title underline order={3} weight={500} align="left">
                       <i class="fa-solid fa-newspaper"></i>
                       {news.text}
                     </Title>
+                                      
                     </a>
+                    <span className="new-tag">New</span>    
                   </li>
                 ))
               }

@@ -17,12 +17,12 @@ export default function Footer() {
           
           <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
             
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              <i className="fab fa-linkedin" style={{ fontSize: '24px' }}></i>
-              </a>
-              <a href="https://www.twitter.com/" target="_blank" rel="noreferrer">
-              <i className="fab fa-twitter" style={{ fontSize: '24px' }}></i>
-              </a>
+          <a href="https://www.linkedin.com/in/dr-tarini-shankar-ghosh-3b211868" target="_blank">
+              <i class="fa-brands fa-linkedin fa-2xl"></i>
+           </a>
+           <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tarini.ghosh@iiitd.ac.in" target="_blank">
+             <i class="fa-solid fa-envelope fa-2xl"></i>
+          </a>
             
           </div>
           <div style={{ marginTop: '10px' }}>

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction:column;
     overflow: hidden;
-    height:400px;
+    max-height:400px;
   }
 
   .marquee--fit-content:hover .marquee__content {
@@ -92,3 +92,19 @@
     margin-left:-3rem ;
   }
   
+  .news-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .new-tag {
+    color: white;
+    margin-left: 10px;
+    background-color: red;
+    padding: 0.2em 0.4em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
