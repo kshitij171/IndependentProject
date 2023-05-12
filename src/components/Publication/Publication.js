@@ -1,158 +1,155 @@
-import { Card, Image, Text,Button ,Title} from '@mantine/core';
-import React,{useState} from 'react';
+import { createStyles, SimpleGrid, Button,Card, Image, Title, Text, Container } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import { useState } from 'react';
 import {FaLink} from 'react-icons/fa';
 import './OtherPublication.js';
 
+const TeachingData = [
+  {
+    imageurl: require('../../assets/pub_1.png'),
+    reference: 'https://gut.bmj.com/content/69/7/1218',
+  },
+  {
+    imageurl: require('../../assets/pub_2.png'),
+    reference: 'https://www.nature.com/articles/s41591-020-0963-8',
+  },
+  {
+    imageurl: require('../../assets/pub_3.png'),
+    reference: 'https://www.nature.com/articles/s41559-020-1236-0',
+  },
+  {
+    imageurl: require('../../assets/pub_4.png'),
+    reference: 'https://www.nature.com/articles/s41575-022-00605-x',
+  },
+  {
+    imageurl: require('../../assets/pub_5.png'),
+    reference: 'https://www.nature.com/articles/s43587-022-00306-9',
+  },
+  {
+    imageurl: require('../../assets/pub_6.png'),
+    reference: 'https://elifesciences.org/articles/50240',
+  },
+  {
+    imageurl: require('../../assets/pub_7.png'),
+    reference: 'https://www.sciencedirect.com/science/article/abs/pii/S0016508520355086?via%3Dihub',
+  },
+  {
+    imageurl: require('../../assets/pub_8.png'),
+    reference: 'https://www.tandfonline.com/doi/full/10.1080/19490976.2020.1822729',
+  },
+  
+];
 
+const useStyles = createStyles((theme) => ({
+  card: {
+    boxShadow: theme.shadows.md,
+    transition: 'transform 150ms ease, box-shadow 150ms ease',
+    margin: theme.spacing.xl,
 
-const ImageCard = ({ src, alt, reference, title }) => {
-  const [hovered, setHovered] = useState(false);
+    '&:hover': {
+      transform: 'scale(1.01)'
+    },
+   
+  },
 
-
-  return (
-    <Card
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{ position: 'relative' }}
-    >
-      <Image src={src} alt={alt} height={200} fit="contain" />
-      {hovered && (
-        <a
-          href={reference}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            backgroundColor: 'rgba(255, 255, 255, 0.7)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            cursor: 'pointer',
-          }}
-        >
-          <Text
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            size="lg"
-            weight={500}
-            color="blue"
-          >
-            <FaLink style={{ marginLeft: 4 }} />
-            Link of Paper
-          </Text>
-        </a>
-      )}
-      <Text
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginTop: '1rem',
-        }}
-        size="md"
-        weight={500}
-        color="black"
-      >
-        {title}
-      </Text>
-    </Card>
-  );
-};
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 600,
+  },
+}));
 
 const Publication = () => {
- 
+  const { classes } = useStyles();
+  const matches = useMediaQuery('(max-width: 767px)');
+  const cols = matches ? 1 : 3;
   
-  const images = [
-    {
-      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-      alt: 'Placeholder image 1',
-      title:'image1',
-      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-    },
-    {
-      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-      alt: 'Placeholder image 2',
-      title:'image2',
-      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-    },
-    {
-      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-      alt: 'Placeholder image 3',
-      title:'image3',
-      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-    },
-    {
-      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-      alt: 'Placeholder image 4',
-      title:'image4',
-      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-    },
-    {
-      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-      alt: 'Placeholder image 4',
-      title:'image5',
-      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-    },
-    {
-      src: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-      alt: 'Placeholder image 4',
-      title:'image6',
-      reference: 'https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202101/MIT-Microbiome-01-PRESS_0.jpg?itok=oUTZQgFG',
-    },
-  ];
-  
-  
-  return (
-    
-    <>
-    <Title
-      order={1}
-      size="h1"
-      sx={{
-        fontWeight: 800,
-        fontSize:'40px',
-        textAlign: 'center',
-        color: 'teal',
-        marginTop: 80,
-      }}
-      weight={800}
-      align="center"
-    >
-      Major Publications
+  const CardWithOverlay = ({ article }) => {
+    const [hovered, setHovered] = useState(false);
 
-      <div
+    return (
+      <Card
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        key={article.name}
+        p="xl"
+        radius="xl"
+        component="a"
+        href="#"
+        className={classes.card}
+      >
+        <Image src={article.imageurl} height={200} objectFit="contain" />
+        {hovered && (
+          <a
+            href={article.reference}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              backgroundColor: 'rgba(205, 205, 205, 0.7)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              cursor: 'pointer',
+            }}
+          >
+            
+            <Text
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              size="lg"
+              weight={500}
+              color="blue"
+            >
+              <FaLink style={{ marginLeft: 4 }} />
+              Link of Paper
+            </Text>
+          </a>
+        )}
+      </Card>
+    );
+  };
+
+  const cards = TeachingData.map((article) => (
+    <CardWithOverlay article={article} key={article.name} />
+  ));
+
+  return (
+    <div style={{ backgroundColor: 'white', textAlign: 'center' }}>
+      <Title
+        align="center"
+        mb={'xs'}
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 16,
-          paddingTop: 20,
+          marginTop: '80px',
+          color: 'teal',
+          fontSize: '40px',
+          fontWeight: '800',
         }}
       >
-        {images.map((image, index) => (
-          <ImageCard key={index} {...image} />
-        ))}
-      </div>
-    </Title>
-    <Button
-      style={{
-        display: 'block',
-        margin: '40px auto 0',
-        color: '#ffffff',
-        backgroundColor: 'teal',
-      }}
-      onClick={() => {
-        window.open('/publications/OtherPublication', '_blank')
-      }}
-    >
-    Explore More Other publications
-    </Button>
-  </>
-
+        Major Publications
+      </Title>
+      <Container py="xl" style={{ maxWidth: '100vw' }}>
+        <SimpleGrid cols={cols}>{cards}</SimpleGrid>
+      </Container>
+      <Button
+        style={{
+          display: 'block',
+          margin: '40px auto 0',
+          color: '#ffffff',
+          backgroundColor: 'teal',
+        }}
+        onClick={() => {
+          window.open('/publications/OtherPublication', '_blank')
+        }}
+      >
+      Explore More Other publications
+      </Button>
+    </div>
   );
 };
+
 
 export default Publication;
