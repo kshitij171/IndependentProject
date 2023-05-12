@@ -1,45 +1,51 @@
-import React from 'react';
-import { Title, SimpleGrid, Image, Paper, Stack, Text } from '@mantine/core';
+import { createStyles, SimpleGrid, Card, Image, Title, Text, Container } from '@mantine/core';
 
-export function Teaching(props) {
-  const productData = [
-    {
-      imageurl: require('../../assets/course_image.png'),
-      name: 'BIO548(HMDS)',
-      description: 'Human Microbiome Data Science',
-    },
-    {
-      imageurl: require('../../assets/course_image.png'),
-      name: 'BIO549(CoMeG)',
-      description: 'Computational Metagenomics',
-    },
-  ];
+const TeachingData = [
+  {
+    imageurl: require('../../assets/course_image.png'),
+    name: 'BIO548(HMDS)',
+    description: 'Human Microbiome Data Science',
+  },
+  {
+    imageurl: require('../../assets/course_image.png'),
+    name: 'BIO549(CoMeG)',
+    description: 'Computational Metagenomics',
+  },
+  
+];
 
-  const teamCards = productData.map((item) => (
-    <Paper
-      radius={20}
-      withBorder
-      shadow={'xs'}
-      p="xs"
-      key={item.name}
-      style={{ width: '300px', margin: 'auto' }}
-    >
-      <Image
-        src={item.imageurl}
-        width="100%"
-        height={200}
-        objectFit="cover"
-        style={{ marginBottom: '1rem' }}
-      />
-      <Stack spacing={'xs'}>
-        <Text align="center" size="xl" weight={500}>
-          {item.name}
-        </Text>
-        <Text align="center" size="xl" weight={500}>
-          {item.description}
-        </Text>
-      </Stack>
-    </Paper>
+const useStyles = createStyles((theme) => ({
+  card: {
+    transition: 'transform 150ms ease, box-shadow 150ms ease',
+    margin: theme.spacing.xl,
+
+    '&:hover': {
+      transform: 'scale(1.01)',
+      boxShadow: theme.shadows.md,
+    },
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 600,
+  },
+}));
+
+export function Teaching() {
+  const { classes } = useStyles();
+
+  const cards = TeachingData.map((article) => (
+    <Card key={article.name} p="xl" radius="xl" component="a" href="#" className={classes.card}>
+      
+      <Image src={article.imageurl} objectFit="cover"/>
+     
+      <Text className={classes.title} mt={5}>
+        {article.name}
+      </Text>
+      <Text className={classes.title} mt={5}>
+        {article.description}
+      </Text>
+    </Card>
   ));
 
   return (
@@ -56,10 +62,11 @@ export function Teaching(props) {
       >
         Courses
       </Title>
-
-      <SimpleGrid cols={2} spacing="xs" style={{ margin: 'auto' }}>
-        {teamCards}
-      </SimpleGrid>
+      <Container py="xl">
+        <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+          {cards}
+        </SimpleGrid>
+      </Container>
     </div>
   );
 }
