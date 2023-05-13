@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import {Title, SimpleGrid,Box} from '@mantine/core';
 import { Stack, Modal,  Badge, Button, useMantineTheme,Avatar, Text,Paper,Group } from '@mantine/core';
+import Footer from '../Footer';
 
 const Team = (props) => {
   
@@ -126,6 +127,7 @@ const Team = (props) => {
     <SimpleGrid
       cols={4}
       spacing="lg"
+      mb={50}
       breakpoints={[
         { maxWidth: 'md', cols: 3, spacing: 'md' },
         { maxWidth: 'sm', cols: 2, spacing: 'sm' },

@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, Title } from '@mantine/core';
 
 import { List } from '@mantine/core';
+import Footer from '../Footer';
 
 
 
@@ -230,7 +231,6 @@ Gut-Brain Axis: Dietary, Probiotic, and Prebiotic Interventions on the Microbiot
 Edition. The Academic Press (in press).</List.Item>
       </List>
 
-      
       
     </div>
   

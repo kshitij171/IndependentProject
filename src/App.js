@@ -3,7 +3,7 @@
 import Home from './components/Home/Home';
 import Team from './components/Navbar/Team';
 import MyNavbar from './components/Navbar/MyNavbar';
-import { BrowserRouter, Switch,Routes, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Routes, Route } from "react-router-dom";
 import Research from './components/Research/Research';
 import Publication from './components/Publication/Publication';
 import { Contact } from './components/Contact/Contact';
@@ -17,17 +17,17 @@ function App() {
     <BrowserRouter>
       <MyNavbar />
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/publications" element={<Publication />} />
-          <Route path="/publications/OtherPublication" element={<PublicationList />} />
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/teaching" element={<Teaching/>}/>
-        </Routes>
-      <Footer/>
-      </BrowserRouter>
-    
+        <Route path="/" element={<Home />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/research" element={<Research />} />
+        <Route path="/publications" element={<Publication />} />
+        <Route path="/publications/OtherPublication" element={<PublicationList />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/teaching" element={<Teaching />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+
   );
 }
 

@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 
 export default function Footer() {
   return (
-    <div style={{ backgroundColor: '#FFFDF0', color: '#000', padding: '5px',marginTop: '50px' }}>
+    <div style={{ backgroundColor: '#FFFDF0', color: '#000', padding: '13px', width:"100%", position:"static", bottom:"0"}}>
       <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ flex: '1' }}>
@@ -36,5 +36,5 @@ export default function Footer() {
       </div>
       <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px' }}>CopyRight© MicroBiome Informatics Lab, All rights reserved.</p>
     </div>
-  )
+  );
 }

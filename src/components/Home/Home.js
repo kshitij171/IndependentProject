@@ -12,6 +12,7 @@ import ProfCard from '../ProfCard/ProfCard';
 import { Image, Highlight,Paper,AspectRatio,Title,Group } from '@mantine/core';
 import PubCards from '../PubCards';
 import './newsStyle.css';
+import Footer from '../Footer';
 
 
 const Home = () => {
@@ -107,7 +108,7 @@ const Home = () => {
 				<div style={{textAlign:'center'}}>
 					<h1>NEWS</h1>
 				</div>
-				<Paper shadow="xl" radius="lg" p="lg" align="center" width="100vw" mt="50px" >
+				<Paper shadow="xl" radius="lg" p="lg" align="center" width="100vw" mt="50px" mb={50}>
           <div className="marquee marquee--fit-content marquee--pos-absolute">
             <ul className="marquee__content">
               {
@@ -147,7 +148,6 @@ const Home = () => {
           </div>
         </Paper>
 			</div>
-
 		</>
 	)
 }

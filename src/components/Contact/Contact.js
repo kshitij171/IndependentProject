@@ -3,6 +3,7 @@ import { useForm } from '@mantine/form';
 import React, { useState } from "react";
 
 import emailjs from 'emailjs-com';
+import Footer from '../Footer';
 
 export function Contact() {
   // const theme = useMantineTheme();
@@ -91,15 +92,12 @@ export function Contact() {
         onChange={(e) => setMessage(e.target.value)}
       />
       <Group position="center" mt="xl">
-          <Button color="teal" type="submit" radius="md">
+          <Button color="teal" type="submit" radius="md" mb={50}>
                     Submit
           </Button>
           {alert && <Alert color={alert.type} onClose={() => setAlert(null)}>{alert.message}</Alert>}
       
       </Group>
-      
-       
-     
       </Box>
     </form>
   );
