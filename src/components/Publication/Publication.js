@@ -37,6 +37,11 @@ const TeachingData = [
     imageurl: require('../../assets/pub_8.png'),
     reference: 'https://www.tandfonline.com/doi/full/10.1080/19490976.2020.1822729',
   },
+  {
+    imageurl: require('../../assets/pub_9.png'),
+    reference: 'https://www.gastrojournal.org/article/S0016-5085(23)00622-4/fulltext?referrer=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F',
+  },
+  
   
 ];
 
