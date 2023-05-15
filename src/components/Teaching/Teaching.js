@@ -41,10 +41,10 @@ export function Teaching() {
       
       <Image src={article.imageurl} objectFit="cover"/>
      
-      <Text className={classes.title} mt={5}>
+      <Text className={classes.title} mt={5} fontSize="18px">
         {article.name}
       </Text>
-      <Text className={classes.title} mt={5}>
+      <Text className={classes.title} mt={5} fontSize="18px">
         {article.description}
       </Text>
     </Card>
