@@ -202,7 +202,7 @@ function PublicationList() {
             <Text weight={700} size="xl">{publication.year}</Text>
             <List size='sm' style={{ paddingLeft: 20, marginBottom: '20px' }}>
               {publication.papers.map((paper, index) => (
-                <List.Item key={index} ordered style={{ marginBottom: '20px', listStyleType: 'numbered' }}>
+                <List.Item key={index} ordered style={{ marginBottom: '20px', listStyleType: 'numbered',textAlign:'justify'}}>
                   {paper.includes('Ghosh TS') ?
                   <span>
                    {paper.split('Ghosh TS')[0]}<strong>Ghosh TS</strong>{paper.split('Ghosh TS')[1]}
