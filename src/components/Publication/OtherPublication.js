@@ -5,7 +5,6 @@ import { List } from '@mantine/core';
 import Footer from '../Footer';
 
 
-
 // function just add papers with link and other publication paper list will be created
 const publications = [
   {

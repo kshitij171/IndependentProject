@@ -3,7 +3,6 @@ import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
 import {FaLink} from 'react-icons/fa';
 import './OtherPublication.js';
-import Footer from '../Footer.js';
 
 const TeachingData = [
   {
@@ -145,10 +144,10 @@ const Publication = () => {
           marginBottom: "50px",
         }}
         onClick={() => {
-          window.open('/publications/OtherPublication', '_blank')
+          window.open('/OtherPublication', '_blank',"noopener noreferrer")
         }}
       >
-      Explore More Other publications
+      Full List Of Publications
       </Button>
     </div>
   );

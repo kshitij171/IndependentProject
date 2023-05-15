@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
           <div style={{ marginTop: '10px' }}>
             <p style={{ marginBottom: '5px' }}>Address:</p>
-            <p>MicroBiome Informatics Lab , R&D Building</p>
+            <p>Microbiome Informatics Lab, A-312, R&D Building</p>
             <p>Indraprastha Institute of Information Technology Delhi</p>
             <p>Okhla Industrial Estate, Phase III</p>
             <p>New Delhi - 110020, India</p>

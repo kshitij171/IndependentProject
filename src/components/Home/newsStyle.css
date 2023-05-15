@@ -108,3 +108,18 @@
     text-transform: uppercase;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
+
+  .highlgt{
+    color: #fff;
+    font-size: 4em;
+    line-height:1.25em;
+    font-weight: 500;
+    width: 8em;
+    margin-left: 0.75em;
+  }
+  @media screen and (max-width: 768px) {
+    .highlgt {
+      font-size:xx-large;
+      width: 8em;
+    }
+  }

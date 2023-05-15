@@ -6,9 +6,9 @@ const MyResCard = ({ title, data, ind }) => {
     const [opened, { toggle }] = useDisclosure(false);
     return (
         <Box mx="auto" mb={60}>
-            <Box onClick={toggle} bg={"#D9D9D9"} w={"70vw"} c={"#000000"}  style={
+            <Box onClick={toggle} bg={"#008080"} w={"70vw"} c={"#000000"}  style={
                 { cursor: "pointer", padding: "12px 20px 12px 20px", borderRadius: opened? "0px" : "3px", fontWeight: "bold", display: "flex", justifyContent: "space-between" }}>
-                <Text fz={20}> {ind + ". " + title} </Text>
+                <Text fz={20} color='white'> {ind + ". " + title} </Text>
                 <Text> ▼ </Text>
             </Box>
             <Collapse in={opened} bg={"#D9D9D9"} w={"70vw"}>

@@ -1,7 +1,7 @@
 import { Text, createStyles, Image, Flex, Paper, Group, AspectRatio, Blockquote,Stack } from '@mantine/core';
 import { ipsum} from './Constant';
 import img from '../../assets/tarini.png';
-import { Icon24Hours, IconChevronRight } from '@tabler/icons';
+
 const useStyles = createStyles((theme) => ({
     container: {
       [`@media (max-width: 4000px)`]: {
@@ -34,11 +34,11 @@ const ProfCard = () => {
                 <Image src={img} alt={'Prof. image'} />
             </AspectRatio>
             <Stack >
-            <Text size={30} fw = {700} c="rgb(19, 102, 215)" >Tarini Shankar Ghosh</Text>
-            <Text size={20} fw = {500}>Computational Microbiologist & Educator</Text>
-            <Blockquote className='bb'>
+            <Text size={30} fw = {700} c="rgb(19, 102, 215)" >Dr. Tarini Shankar Ghosh</Text>
+            <Text size={20} fw = {500}>About Me</Text>
+            {/* <Blockquote className='bb'> */}
                 {ipsum.map((ip) =>
-                    <Text fs="italic" sx={{ paddingBottom: '12px' }}>{ip}</Text>)
+                    <Text fs="italic" sx={{ paddingBottom: '12px',textAlign:'justify',textJustify:'inter-word' }}>{ip}</Text>)
                 }
                 <Group position="center" spacing="lg">
                     <a href="https://www.linkedin.com/in/dr-tarini-shankar-ghosh-3b211868" target="_blank">
@@ -51,7 +51,7 @@ const ProfCard = () => {
                 </Group>
                 
                 
-            </Blockquote>
+            {/* </Blockquote> */}
             </Stack>
         </Flex>
         </Paper>

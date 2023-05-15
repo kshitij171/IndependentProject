@@ -1,26 +1,24 @@
 import React from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
-// import "bootstrap/dist/css/bootstrap.css";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-// import Carousel from 'react-bootstrap/Carousel';
 import "react-multi-carousel/lib/styles.css";
-import videoFile from '../../assets/video.gif';
-import Group_photo from '../../assets/Group_photo.jpg';
-import funded from '../../assets/funded.jpeg';
+import videoFile from '../../assets/a.gif';
+import Group_photo from '../../assets/group.jpg';
+import funded from '../../assets/funded.png';
 import ProfCard from '../ProfCard/ProfCard';
-import { Image, Highlight,Paper,AspectRatio,Title,Group } from '@mantine/core';
+import { Image, Highlight,Paper,AspectRatio,Title} from '@mantine/core';
 import PubCards from '../PubCards';
 import './newsStyle.css';
-import Footer from '../Footer';
+
 
 
 const Home = () => {
   
   const news = [
     {
-      text:`Extremely delighted to share that our latest article entitled "Translating the Microbiome - What's the target?" has been published in Gastroenterology journal.`,
-      link: 'https://pubmed.ncbi.nlm.nih.gov/37094661/'
+      text:`Commentary titled "Translating the microbiome - What's the target?" published in Gastroenterology journal in collaboration with Prof. Paul O'Toole, Prof. Fergus Shanahan and Prof. Nicola Segata. Check it out.`,
+      link: 'https://www.sciencedirect.com/science/article/pii/S0016508523006224?via%3Dihub'
     },
     
     
@@ -29,7 +27,7 @@ const Home = () => {
     {
       id: 1,
       src: videoFile,
-      text:'',
+      text:'Decoding the big stories of our litte bugs',
       highlighted_text:'Big Stories',
 
       alt: "First Slide"
@@ -37,10 +35,10 @@ const Home = () => {
     {
       id: 2,
       src: Group_photo,
-      text:'Decoding The Big Stories Of Our Little Bugs',
+      text:'',
       highlighted_text:'Big Stories',
 
-      alt: "Third Slide"
+      alt: "Second Slide"
     }
   ]
 
@@ -51,14 +49,13 @@ const Home = () => {
 	<Carousel controls="true" >
       {images.map(imageSlide => (
           <Carousel.Item key={imageSlide.id} style={{marginTop:'80px' ,height:'calc(100vh - 150px)'}}>
-            <div style={{backgroundImage:`url(${imageSlide.src})`,width:'100%',height:'100%',backgroundSize:'cover',backgroundPosition:'center',textAlign:'left',display:'flex',alignItems:'center'}}>
+            <div style={{backgroundImage:`url(${imageSlide.src})`,width:'100%',height:'100%',backgroundSize:'cover',backgroundPosition:'center',textAlign:'left',display:'flex',alignItems:'center',backgroundRepeat:'no-repeat'}}>
       <Highlight
           align="left"
-          
-          style= {{color: '#fff',fontSize: '40px',fontWeight: '800',maxWidth:'380px',padding:'30px'}}
+          className='highlgt'
           highlight={[`${imageSlide.highlighted_text}`]}
           highlightStyles={(theme) => ({
-            backgroundImage: theme.fn.linearGradient(45, theme.colors.cyan[5], theme.colors.indigo[5]),
+            backgroundImage: theme.fn.linearGradient(45, theme.colors.teal[7], theme.colors.teal[8]),
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           })}
@@ -83,7 +80,7 @@ const Home = () => {
 			<div style={{backgroundColor:'white',padding:'30px',display:'flex' ,justifyContent:'center'}}>
 				
 				<AspectRatio ratio={1/1} w={'600px'} mt="lg">
-					<Image src={require('../../assets/microbiome.png')} alt={'lab'} />
+					<Image src={require('../../assets/Microbiome.png')} alt={'lab'} />
 				</AspectRatio>
 			</div>
 			<div style={{backgroundColor:'#FFFDF0',padding:'30px'}}>
@@ -114,7 +111,7 @@ const Home = () => {
               {
                 news.map(news=>(
                   <li class="news-item">
-                    <a href={news.link} target="_blank">
+                    <a href={news.link} target="_blank" rel="noopener noreferrer">
                     
                     <Title underline order={3} weight={500} align="left">
                     <i class="fa-solid fa-newspaper"></i>
@@ -132,7 +129,7 @@ const Home = () => {
             {
                 news.map(news=>(
                   <li class="news-item">
-                    <a href={news.link} target="_blank">
+                    <a href={news.link} target="_blank" rel="noopener noreferrer">
                     
                     <Title underline order={3} weight={500} align="left">
                       <i class="fa-solid fa-newspaper"></i>

@@ -2,7 +2,8 @@ export const links =
     [
         {
             "link": "/",
-            "label": "Home"
+            "label": "Home",
+
         },
         {
             "link": "/publications",
