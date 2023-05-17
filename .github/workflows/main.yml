@@ -1,4 +1,4 @@
-name: pull_req
+name: main
 
 on:
     [ pull_request, push ]
@@ -13,5 +13,5 @@ jobs:
               with:
                 cache: 'npm'
             - run: npm ci
-            - run: npm run build
+            - run: npm start
 
