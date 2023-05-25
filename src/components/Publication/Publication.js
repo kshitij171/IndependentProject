@@ -124,10 +124,7 @@ const Publication = () => {
     <CardWithOverlay article={article} key={article.name} />
   ));
 
-  const navigate = useNavigate();
-  const handleclick =() => {
-    navigate('/OtherPublication');
-  };
+  
 
   return (
     <div style={{ backgroundColor: 'white', textAlign: 'center' }}>
