@@ -8,10 +8,12 @@ import { Contact } from './components/Contact/Contact';
 import { Teaching } from './components/Teaching/Teaching';
 import Footer from './components/Footer';
 import PublicationList from './components/Publication/OtherPublication';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <MyNavbar />
       <Routes>
         <Route path="/" element={<Home />} activeClassName="active"/>

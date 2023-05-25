@@ -1,5 +1,5 @@
-import { Box, Card, Image, Group, Text, Badge, Button, SimpleGrid, Collapse } from "@mantine/core";
-import { useDisclosure } from '@mantine/hooks';
+import { Box} from "@mantine/core";
+// import { useDisclosure } from '@mantine/hooks';
 import { papers } from "./Constants";
 import MyResCard from "./MyResCard";
 

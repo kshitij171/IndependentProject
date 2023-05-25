@@ -2,7 +2,8 @@ import { createStyles, SimpleGrid, Button,Card, Image, Title, Text, Container } 
 import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
 import {FaLink} from 'react-icons/fa';
-import './OtherPublication.js';
+import { NavLink } from "react-router-dom";
+
 
 const TeachingData = [
   {
@@ -140,20 +141,29 @@ const Publication = () => {
       <Container py="xl" style={{ maxWidth: '100vw' }}>
         <SimpleGrid cols={cols}>{cards}</SimpleGrid>
       </Container>
-      <Button
+      <NavLink
         style={{
-          display: 'block',
-          margin: '40px auto 0',
-          color: '#ffffff',
+          display: 'inline-block',
+          padding: '10px 20px',
           backgroundColor: 'teal',
-          marginBottom: "50px",
+          color: 'white',
+          bordeRadius: '5px',
+          textDecoration: 'none',
+          marginBottom:'50px'
         }}
+        to="/OtherPublication/#"
+        
+      >
+        Full List Of Publications
+      </NavLink>
+      {/* <Button
+        
         onClick={() => {
           window.open('/OtherPublication', '_blank',"noopener noreferrer")
         }}
       >
       Full List Of Publications
-      </Button>
+      </Button> */}
     </div>
   );
 };

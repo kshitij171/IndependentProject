@@ -80,7 +80,7 @@ const Home = () => {
 			<div style={{backgroundColor:'white',padding:'30px',display:'flex' ,justifyContent:'center'}}>
 				
 				<AspectRatio ratio={1/1} w={'600px'} mt="lg">
-					<Image src={require('../../assets/microbiome.png')} alt={'lab'} />
+					<Image src={require('../../assets/Microbiome.png')} alt={'lab'} />
 				</AspectRatio>
 			</div>
 			<div style={{backgroundColor:'#FFFDF0',padding:'30px'}}>
