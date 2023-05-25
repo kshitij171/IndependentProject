@@ -3,6 +3,8 @@ import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
 import {FaLink} from 'react-icons/fa';
 import './OtherPublication.js';
+import { useNavigate} from 'react-router-dom';
+
 
 const TeachingData = [
   {
@@ -123,6 +125,11 @@ const Publication = () => {
     <CardWithOverlay article={article} key={article.name} />
   ));
 
+  const navigate = useNavigate();
+  const handleclick =() => {
+    navigate('/OtherPublication');
+  };
+
   return (
     <div style={{ backgroundColor: 'white', textAlign: 'center' }}>
       <Title
@@ -148,9 +155,7 @@ const Publication = () => {
           backgroundColor: 'teal',
           marginBottom: "50px",
         }}
-        onClick={() => {
-          window.open('/OtherPublication', '_blank',"noopener noreferrer")
-        }}
+        onClick={handleclick}
       >
       Full List Of Publications
       </Button>
