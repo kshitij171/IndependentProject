@@ -12,12 +12,12 @@ const TeachingData = [
     name: 'BIO549(CoMeG)',
     description: 'Computational Metagenomics',
   },
-  
+
 ];
 
 const useStyles = createStyles((theme) => ({
   card: {
-    
+
     boxShadow: theme.shadows.md,
     transition: 'transform 150ms ease, box-shadow 150ms ease',
     margin: theme.spacing.xl,
@@ -37,10 +37,10 @@ export function Teaching() {
   const { classes } = useStyles();
 
   const cards = TeachingData.map((article) => (
-    <Card key={article.name} p="xl" radius="xl" component="a" href="#" className={classes.card}>
-      
-      <Image src={article.imageurl} objectFit="cover"/>
-     
+    <Card key={article.name} p="xl" radius="xl" component="a" className={classes.card}>
+
+      <Image src={article.imageurl} objectFit="cover" />
+
       <Text className={classes.title} mt={5} fontSize="18px">
         {article.name}
       </Text>
