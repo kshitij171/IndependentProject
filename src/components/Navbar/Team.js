@@ -34,7 +34,7 @@ const Team = (props) => {
           mail:'vindhya22208@iiitd.ac.in'
         },
         {
-          designation: "Ph.D. Student",
+          designation: "M.Tech. Student",
           imageurl:
           require('../../assets/shivangi.png'),
             name: "Shivangi Verma",
