@@ -28,60 +28,67 @@ export default function PubCards() {
     {
       id: 1,
       imageurl:
-        require('../assets/NatureReviewsGastro.jfif'),
-      link:'https://www.nature.com/articles/s41575-022-00605-x'
+        require('../assets/The_BMJ_Food_For_Thought.jpg'),
+      link: 'https://www.bmj.com/content/bmj/383/bmj-2023-075180.full.pdf'
     },
+
     {
       id: 2,
       imageurl:
-        require('../assets/NatureAgingCover.png'),
-      link:'https://www.nature.com/articles/s43587-022-00306-9'
+        require('../assets/NatureReviewsGastro.jfif'),
+      link: 'https://www.nature.com/articles/s41575-022-00605-x'
     },
     {
       id: 3,
       imageurl:
-        require('../assets/NatureEcologyCover.png'),
-      link:'https://www.nature.com/articles/s41559-020-1236-0'
+        require('../assets/NatureAgingCover.png'),
+      link: 'https://www.nature.com/articles/s43587-022-00306-9'
     },
     {
       id: 4,
       imageurl:
-        require('../assets/NatureMedicineCover.png'),
-      link:'https://www.nature.com/articles/s41591-020-0963-8'
+        require('../assets/NatureEcologyCover.png'),
+      link: 'https://www.nature.com/articles/s41559-020-1236-0'
     },
     {
       id: 5,
       imageurl:
-        require('../assets/GastroenterologyCover.jpg'),
-      link:'https://www.gastrojournal.org/article/S0016-5085(20)35508-6/fulltext',
+        require('../assets/NatureMedicineCover.png'),
+      link: 'https://www.nature.com/articles/s41591-020-0963-8'
     },
     {
       id: 6,
       imageurl:
+        require('../assets/GastroenterologyCover.jpg'),
+      link: 'https://www.gastrojournal.org/article/S0016-5085(20)35508-6/fulltext',
+    },
+    {
+      id: 7,
+      imageurl:
         require('../assets/GutCover.jfif'),
-      link:'https://gut.bmj.com/content/69/7/1218'
+      link: 'https://gut.bmj.com/content/69/7/1218'
     }
   ];
   const product = productData.map((item) => (
     <div className="Jcard">
       <a href={item.link} target="_blank">
-          <img className="card-img" src={item.imageurl} style={{width:'100%',height:'100%',objectFit:'cover'}} alt="Rome" />
+        <img className="card-img" src={item.imageurl} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Rome" />
       </a>
     </div>
   ));
   return (
-    
-      <Carousel
+
+    <Carousel
       autoPlay={true}
       autoPlaySpeed={3000}
       // showDots={true} 
       responsive={responsive}
       infinite={true}
-   
-      >
 
-        {product}
-      </Carousel>
-   
+    >
+
+      {product}
+    </Carousel>
+
   )
 }

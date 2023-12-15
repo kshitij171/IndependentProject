@@ -11,7 +11,21 @@ import './PublicationList.css'
 const publications = [
   {
     year: 2023,
-    papers: [' O’Toole PW, Ghosh TS, Goswami S, Manghi P, Segata N, Shanahan F. Translating the microbiome - whats the target? Gastroenterology. 2023 Apr 22:S0016-5085(23)00622-4.',
+    papers: [
+      ' Ye H, Ghosh TS, Hueston CM, Vlckova K, Golubeva AV, Hyland NP, O’Toole PW. Engraftment of aging-related human gut microbiota and the effect of a seven-species consortium in a pre-clinical model. Gut Microbes. 2023 Dec;15(2):2282796. doi: 10.1080/19490976.2023.2282796',
+
+      'Ghosh TS, Valdes AM. Evidence for clinical interventions targeting the gut microbiome in cardiometabolic disease. BMJ. 2023 Oct 9;383:e075180. doi: 10.1136/bmj-2023-075180. PMID: 37813434; PMCID: PMC10561016.',
+
+      ' Cronin P, McCarthy S, Hurley C, Ghosh TS, Cooney JC, Tobin AM, Murphy M, O’Connor EM, Shanahan F & O’Toole PW (2023). Comparative diet-gut microbiome analysis in Crohn’s disease and Hidradenitis suppurativa [Original Research]. Frontiers in Microbiology, 14.',
+
+      ' MacCann R, Ghosh TS, Leon AAG, Li J, Negi R, Gaillard C, Saini G, Tinago W, Feeney, Yousif O, Cotter AG, de Barra E, Sadlier C, Doran P, Landay A, O’Toole PW, Mallon P. 2023. Associations between host microbiome and inflammation suggest role for host microbiome in driving COVID-19 disease severity. Microbes and Infection, 105247',
+
+      'Li J, Ghosh TS, McCann R, Mallon P, Hill C, Draper L, Schult D, Fanning LJ, Shannon R, Sadlier C, Horgan M, O’Mahony L, O’Toole PW. Robust cross-cohort gut microbiome associations with COVID-19 severity. Gut Microbes. 2023 Jan-Dec;15(1):2242615',
+
+      'Strauss JC, Haskey N, Ramay HR, Ghosh TS, Taylor LM, Yousuf M, Ohland C, McCoy KD, Ingram RJM, Ghosh S, Panaccione R, Raman M. Weighted Gene Co-Expression Network Analysis Identifies a Functional Guild and Metabolite Cluster Mediating the Relationship between Mucosal Inflammation and Adherence to the Mediterranean Diet in Ulcerative Colitis. Int J Mol Sci. 2023 Apr 15;24(8):7323. doi: 10.3390/ijms24087323',
+
+      ' O’Toole PW, Ghosh TS, Goswami S, Manghi P, Segata N, Shanahan F. Translating the microbiome - whats the target? Gastroenterology. 2023 Apr 22:S0016-5085(23)00622-4.',
+
       'Shanahan F, Ghosh TS, O’Toole PW. Human microbiome variance is underestimated. Curr Opin Microbiol. 2023 Mar 6;73:102288.'],
   },
 
@@ -181,7 +195,7 @@ const publications = [
 ];
 
 
-const namesToHighlight = ['Ghosh TS', 'Chaitanya SK', 'Mande SS'];
+const namesToHighlight = ['Ghosh TS'];
 
 function PublicationList() {
   // const years = Array.from(new Set(publications.map((p) => p.year))).sort().reverse();

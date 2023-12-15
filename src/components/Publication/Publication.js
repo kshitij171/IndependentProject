@@ -1,11 +1,15 @@
-import { createStyles, SimpleGrid, Button,Card, Image, Title, Text, Container } from '@mantine/core';
+import { createStyles, SimpleGrid, Button, Card, Image, Title, Text, Container } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
-import {FaLink} from 'react-icons/fa';
+import { FaLink } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
 
 
 const TeachingData = [
+  {
+    imageurl: require('../../assets/pub_10.jpg'),
+    reference: 'https://www.bmj.com/content/bmj/383/bmj-2023-075180.full.pdf',
+  },
   {
     imageurl: require('../../assets/pub_1.png'),
     reference: 'https://gut.bmj.com/content/69/7/1218',
@@ -42,8 +46,8 @@ const TeachingData = [
     imageurl: require('../../assets/pub_9.png'),
     reference: 'https://www.gastrojournal.org/article/S0016-5085(23)00622-4/fulltext?referrer=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F',
   },
-  
-  
+
+
 ];
 
 const useStyles = createStyles((theme) => ({
@@ -55,7 +59,7 @@ const useStyles = createStyles((theme) => ({
     '&:hover': {
       transform: 'scale(1.01)'
     },
-   
+
   },
 
   title: {
@@ -69,7 +73,7 @@ const Publication = () => {
   const { classes } = useStyles();
   const matches = useMediaQuery('(max-width: 767px)');
   const cols = matches ? 1 : 3;
-  
+
   const CardWithOverlay = ({ article }) => {
     const [hovered, setHovered] = useState(false);
 
@@ -104,7 +108,7 @@ const Publication = () => {
               cursor: 'pointer',
             }}
           >
-            
+
             <Text
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               size="lg"
@@ -124,7 +128,7 @@ const Publication = () => {
     <CardWithOverlay article={article} key={article.name} />
   ));
 
-  
+
 
   return (
     <div style={{ backgroundColor: 'white', textAlign: 'center' }}>
@@ -151,10 +155,10 @@ const Publication = () => {
           color: 'white',
           bordeRadius: '5px',
           textDecoration: 'none',
-          marginBottom:'50px'
+          marginBottom: '50px'
         }}
         to="/OtherPublication/#"
-        
+
       >
         Full List Of Publications
       </NavLink>
