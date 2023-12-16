@@ -73,10 +73,18 @@ const Team = (props) => {
 
     },
     {
+      designation: "M.Tech Student",
+      imageurl: require('../../assets/Sakshi Mahajan.jpeg'),
+      name: "Sakshi Mahajan",
+      linkedin: 'https://www.linkedin.com/in/sakshi-mahajan-2668521b6/',
+      mail: 'sakshi22204@iiitd.ac.in'
+
+    },
+    {
       designation: "Research Associate",
       imageurl: require('../../assets/chetan_saraf.jpg'),
       name: "Chetan Saraf",
-      linkedin: 'https://www.linkedin.com/in/chetan-sharaf-910574114?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      linkedin: 'https://www.linkedin.com/in/chetan-sharaf-910574114/',
       mail: 'chetan20109@iiitd.ac.in'
 
     },
@@ -84,10 +92,10 @@ const Team = (props) => {
       designation: "Undergrad: IP Student",
       imageurl: require('../../assets/debjit.png'),
       name: "Debjit Pramanik",
-      linkedin: 'https://www.linkedin.com/in/debjit-pramanik-88a837171/  ',
+      linkedin: 'https://www.linkedin.com/in/debjit-pramanik-88a837171/',
       mail: 'debjit20504@iiitd.ac.in'
 
-    }
+    },
 
   ];
 
@@ -126,6 +134,16 @@ const Team = (props) => {
       name: "Amit Malik",
       linkedin: 'https://www.linkedin.com/in/amit-malik-6a1763203',
       mail: 'amitnarela34@gmail.com'
+
+    },
+
+    {
+      designation: "B.Tech Student",
+      imageurl:
+        require('../../assets/Vasanth.jpg'),
+      name: "Lakavath Vasanth Kumar",
+      linkedin: 'https://www.linkedin.com/in/lakavath-vasanth-kumar/',
+      mail: 'lakavath20386@iiitd.ac.in'
 
     }
   ]
