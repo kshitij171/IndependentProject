@@ -33,7 +33,7 @@ const Home = () => {
     {
       id: 1,
       src: videoFile,
-      text: 'Decoding the big stories of our litte bugs',
+      text: 'Decoding the big stories of our little bugs',
       highlighted_text: 'Big Stories',
 
       alt: "First Slide"
