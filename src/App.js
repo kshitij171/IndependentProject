@@ -1,5 +1,5 @@
 import Home from './components/Home/Home';
-import Team from './components/Navbar/Team';
+import Team from './components/Team/Team';
 import MyNavbar from './components/Navbar/MyNavbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Research from './components/Research/Research';
